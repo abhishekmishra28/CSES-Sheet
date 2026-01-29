@@ -64,7 +64,7 @@ The goal is to **understand patterns**, not memorize solutions.
 
 | Section | Solved |
 |--------|--------|
-| Introductory Problems | 0 |
+| Introductory Problems | 6 |
 | Sorting and Searching | 0 |
 | Dynamic Programming | 0 |
 | Graph Algorithms | 0 |
@@ -73,7 +73,7 @@ The goal is to **understand patterns**, not memorize solutions.
 | Mathematics | 0 |
 | String Algorithms | 0 |
 | Advanced Techniques | 0 |
-| **Total** | **0** |
+| **Total** | **6** |
 
 *(This table is updated regularly as I progress.)*
 
