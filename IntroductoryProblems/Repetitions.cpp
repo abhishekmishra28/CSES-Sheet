@@ -9,7 +9,7 @@ int main(){
     for(int i=0;i<n-1;){
         int cnt = 1;
         int j = i+1;
-        while(j>i && s[i]==s[j]) {
+        while(j<n && s[i]==s[j]) {
             cnt++;
             j++;
         }
