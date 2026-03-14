@@ -66,14 +66,14 @@ The goal is to **understand patterns**, not memorize solutions.
 |--------|--------|
 | Introductory Problems | 6 |
 | Sorting and Searching | 0 |
-| Dynamic Programming | 0 |
+| Dynamic Programming | 2 |
 | Graph Algorithms | 0 |
 | Range Queries | 0 |
 | Tree Algorithms | 0 |
 | Mathematics | 0 |
 | String Algorithms | 0 |
 | Advanced Techniques | 0 |
-| **Total** | **6** |
+| **Total** | **8** |
 
 *(This table is updated regularly as I progress.)*
 
