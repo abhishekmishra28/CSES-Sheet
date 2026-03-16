@@ -10,34 +10,32 @@ using vi = vector<int>;
 using vll = vector<ll>;
 using vvl = vector<vector<ll>>;
 
-ll CoinChange(vll &coins, int amt){
-    int n = coins.size();
-    vvl dp(n+1,vll(amt+1,LLONG_MAX));
-    for(int i=0;i<=n;i++){
-        dp[i][0] = 0;
-    }
-    for(int i=1;i<=n;i++){
-        for(int j=1;j<=amt;j++){
-            ll take = LLONG_MAX;
-            if(coins[i-1]<=j){
-                take = 1 + dp[i][j-coins[i-1]];
+int tabulation(vector<int>& coins, int amount) {
+        int n = coins.size();
+        vector<vector<int>> dp(n+1,vector<int>(amount+1,1e9));
+        for(int i=0;i<=n;i++) dp[i][0] = 0;
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=amount;j++){
+                int take = 1e9;
+                if(coins[i-1] <= j){
+                    take = 1+dp[i][j-coins[i-1]];
+                }
+                int notTake = dp[i-1][j];
+                dp[i][j] = min(take,notTake);
             }
-            ll notTake = dp[i-1][j]; 
-            dp[i][j] = min(take,notTake);
         }
-    }
-    return (dp[n][amt] == LLONG_MAX) ? -1 : dp[n][amt];
+        return (dp[n][amount] == 1e9) ? -1 : dp[n][amount];
 }
 
 int main() {
     fastio();
     int n,Amount;
     cin>>n>>Amount;
-    vll coins(n);
+    vi coins(n);
     for(int i=0;i<n;i++){
         cin>>coins[i];
     }
-    ll ans = CoinChange(coins,Amount);
+    int ans = tabulation(coins,Amount);
     cout<<ans;
     return 0;
 }
